@@ -1,0 +1,53 @@
+### win7中怎么将txt文件设置为默认从Notepad++打开
+
+win7自带的笔记本实在是太难用了 ! ! ! 
+
+如何把win7默认的TXT打开方式设置为notepad++ 打开呢
+
+链接在这里 : 
+
+       -----     win7中怎么将txt文件设置为默认从Notepad++打开
+https://jingyan.baidu.com/article/e2284b2b6f02f9e2e6118d99.html
+----------------------------------------------------
+Notepad++是一款非常有特色的编辑器，是开源软件，可以免费使用。我的电脑安装了Notepad++软件，
+但是每次打开txt文件时，默认都是从记事本打开，
+通过右键“打开方式”里也没有"Notepad++"的选项，怎么设置为默认从Notepad++打开呢？
+
+>>>>>>然后 : 
+
+step1:新建记事本，输入下列文字。【可用快捷键：ctrl+c复制以下文字，ctrl+v把它粘贴在记事本里】
+
+----------------输入文字的内容-----------------
+
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\Shell\NotePad++]
+
+[HKEY_CLASSES_ROOT\*\Shell\NotePad++\Command]
+
+@="\"C:\\Program Files\\npp\\Notepad++.exe\\"\"%1\""
+
+---------------------------------------------------
+
+特别注意：更改的地方
+
+@="\"C:\\Program Files\\npp\\Notepad++.exe\\"\"%1\""
+
+我的电脑中，Notepad++的安装路径是：
+
+C:\Program Files\Notepad++
+
+所以我才是这样写的，如果你安装的是在D或E盘，则应做相应的更改。
+
+
+>>>>>>然后 : 
+
+会弹出2个窗口 , 2次都是点击 "确定"
+
+>>>>>>然后 : 
+
+鼠标右击TXT文件 , 选择notepad++为默认打开方式就可以了 
+
+这样就可以双击用notepad++打开win7的txt文件了
+
+
