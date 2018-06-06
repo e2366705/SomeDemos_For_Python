@@ -7,6 +7,7 @@
 
 import requests
 html_code = requests.get('https://tieba.baidu.com/p/5193551629?red_tag=0426669597')
+html_code.encoding = 'utf-8'                  #设置编码格式
 print html_code.text
 
 #注意 : 不具备爬虫伪装能力
