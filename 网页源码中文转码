@@ -1,0 +1,43 @@
+# Small_Python_DemoS
+#自己写的一些零零散散的Python小Demo
+
+
+
+# -*- coding: utf-8 -*-
+ 
+from encodings import gbk
+import chardet
+import re
+import requests
+import sys
+import urllib
+import urllib2
+from django.conf.locale import el
+#设置编码
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+#获得系统编码格式
+type = sys.getfilesystemencoding()
+
+
+#根网址
+r = urllib.urlopen("http://www.e0734.com")
+
+#用户输入网页源码的编码格式 : 
+GBK_UT_8 = raw_input("请输入你的网页源码 ---> GBK还是UTF-8 : ").upper()
+
+#如果编码格式等于 GBK 或者 UTF-8 就开始 读取源码
+if (GBK_UT_8 == 'GBK') or (GBK_UT_8 == 'UTF-8'):
+    try:
+        print '你的网页源码是 : '+GBK_UT_8
+        a = r.read().decode(GBK_UT_8).encode('utf-8')
+        print a
+    except BaseException:
+        #如果网页源码出错,则提醒用户  是不是搞错了
+          print '你确定你网页的源码是 : ' + GBK_UT_8 + '编码格式???'
+    else:
+            print '结束 !'
+else:
+    print '哎呀 输错了,请输入GBK 或者 UTF-8'
+
