@@ -1,0 +1,12 @@
+# Small_Python_DemoS
+自己写的一些零零散散的Python小Demo
+
+
+#!/usr/bin/env python2
+# -*- coding: UTF-8 -*-
+
+import requests
+html_code = requests.get('https://tieba.baidu.com/p/5193551629?red_tag=0426669597')
+print html_code.text
+
+#注意 : 不具备爬虫伪装能力
