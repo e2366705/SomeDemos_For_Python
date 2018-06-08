@@ -2,6 +2,17 @@
 自己写的一些零零散散的Python小Demo
 
 
+**************************************************************************************************************************************
+#伪装自己访问知乎  python requests
+#!/usr/bin/env python2
+# -*- coding: UTF-8 -*-
+import requests
+
+headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"}
+response = requests.get("https://www.zhihu.com", headers=headers)
+print(response.text)
+**************************************************************************************************************************************
+
 #!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
 
