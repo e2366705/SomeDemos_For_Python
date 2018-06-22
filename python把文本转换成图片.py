@@ -6,7 +6,7 @@ import PIL
 
 #计算文本文件的行数
 txt_lines = 0
-file = open("ppp.txt") 
+file = open("ppp.txt", encoding='utf-8') 
 while 1:
     txt_lines += 1
     line = file.readline()
@@ -17,7 +17,7 @@ file.close()
 print('这个文本文件有 : ' , txt_lines-1 , '行')
 
 #读取文本的数据
-f = open('ppp.txt')
+f = open('ppp.txt', encoding='utf-8')
 txt_data = f.read()
 f.close()
 print(txt_data)
