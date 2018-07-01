@@ -2,6 +2,8 @@ import requests
 from lxml import etree
 from urllib import parse
 
+####原文网址 : http://www.cnblogs.com/wanglinjie/p/9248573.html
+
 url = 'https://www.zhihu.com/explore'
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
 html = requests.get(url, headers=headers).text
