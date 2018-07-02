@@ -31,3 +31,6 @@ def get_content(newurl):
 
 for newurl in get_url_num(get_html(url)):
     get_content(newurl)
+    
+    
+    
