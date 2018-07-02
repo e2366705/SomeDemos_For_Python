@@ -27,3 +27,6 @@ for node in node_list:
     with open('explore.txt', 'a', encoding='utf-8') as file:
         file.write('\n'.join([question, author, answer]))
         file.write('\n' + '=' * 50 + '\n')
+        
+        
+        
