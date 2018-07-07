@@ -40,3 +40,8 @@ for p1,d,filelist in os.walk('D:'+os.sep+'KwDownload'):
 paths=os.listdir("D:\\KwDownload")
 for path in paths:
     print(path)
+  
+ # r只读，w可写，a追加
+with open('D:\\QQQQQQQQQQQ.txt','a',encoding='UTF-8') as fff:
+    fff.write('你好啊!!!!\n')
+    fff.close()
