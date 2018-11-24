@@ -1,3 +1,28 @@
+windows 中文件的路径!!!!!
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'folder = r'D:\Py\xianyu\xianyu.txt'
+folder = r'D:\Py\xianyu\xianyu.txt'
+
+加 r
+
+加 r
+
+加 r
+
+加 r
+
+加 r
+
+加 r
+
 创建文件夹 : 
 os.mkdir("D:\\pythoooooooooooooooooooooon") 
 
