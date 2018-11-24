@@ -70,3 +70,9 @@ for path in paths:
 with open('D:\\QQQQQQQQQQQ.txt','a',encoding='UTF-8') as fff:
     fff.write('你好啊!!!!\n')
     fff.close()
+    
+#               读  文件 Read
+folder = r'D:\Py\xianyu\xianyu.txt'
+with open(folder , 'r', encoding='UTF-8') as fff:        //r   表示只读 
+    the_txt_data = fff.read()          // 这就是txt文件的数据
+fff.close()
