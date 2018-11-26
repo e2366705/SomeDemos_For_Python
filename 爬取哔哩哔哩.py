@@ -148,5 +148,8 @@ def save_data(data):
 if __name__ == '__main__':
     forder = 'D:\\Py\\bilibili\\bilibili_search_by_python\\1000_results2.txt'
     jie_xi(forder)
+    
+    
+    
 
 
