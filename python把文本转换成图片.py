@@ -38,3 +38,5 @@ im.show()
 
 #生成图片后保存
 #im.save("t.png")
+
+
