@@ -37,3 +37,5 @@ def img_to_str(image_path):
 
 if __name__ == '__main__' :
     img_to_str(r'C:\Users\QAQ\Desktop\1.jpg')
+    
+    
