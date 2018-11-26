@@ -43,3 +43,7 @@ try:
     print('success')
 except smtplib.SMTPException as e:
     print('error',e) #打印错误
+
+    
+    
+    
