@@ -54,3 +54,5 @@ def batchDownloadJPGs(jpgs_url_list,path = './'):
 if __name__ == '__main__':
      HTML__Code = read_html_code()
      batchDownloadJPGs(HTML__Code)
+    
+    
