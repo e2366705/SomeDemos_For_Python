@@ -41,3 +41,5 @@ if (GBK_UT_8 == 'GBK') or (GBK_UT_8 == 'UTF-8'):
 else:
     print '哎呀 输错了,请输入GBK 或者 UTF-8'
 
+
+
