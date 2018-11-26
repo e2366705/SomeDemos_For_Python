@@ -58,3 +58,5 @@ for Goo,Mon in new_new_dict.items():
 print('共计 : ',money,'元人民币')
 
 print('-----')
+
+
