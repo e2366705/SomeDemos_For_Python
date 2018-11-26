@@ -76,3 +76,5 @@ folder = r'D:\Py\xianyu\xianyu.txt'
 with open(folder , 'r', encoding='UTF-8') as fff:        //r   表示只读 
     the_txt_data = fff.read()          // 这就是txt文件的数据
 fff.close()
+
+
