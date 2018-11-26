@@ -24,3 +24,7 @@ for i in range(10):
         rate = i.xpath('//span[@class="rating_num"]/text()')[0]
         comCount = i.xpath('//div[@class="star"]/span[4]/text()')[0]
         print(title,info_1,rate,date,country,geners,comCount)
+
+        
+        
+        
