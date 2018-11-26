@@ -1,0 +1,35 @@
+
+##                          正则表达式          筛选文字中出现的数字
+import re
+
+str = '来闲鱼467天了,卖出过123件宝贝。现居浙江宁波北仑。90后巨蟹座女生。自由职业行业创始人。宁波大学毕业。喜欢宠物、时尚、运动、音乐、娱乐。质量问题我负责退货费用'
+
+s = re.findall("\d+",str)[1]
+the__sells = '卖出过' + s + '件宝贝';
+print(the__sells)
+print(type(s))
+sales = int(s)
+print(sales)
+print(type(sales))
+
+###                          **************************************************
+
+
+
+
+###                         正则表达式 筛选出一段文字中有几个 URL 链接
+from selenium import webdriver
+import time
+import re
+
+
+
+strtttt = '11q1q1q https://mbd.com/nD&n_type=0&p_from=1 8u8u8u11q1q1q https://mbd.com/nD&n_type=0&p_from=1 8u8u8u11q1q1q https://mbd.com/nD&n_type=0&p_from=1 8u8u8u11q1q1q https://mbd.com/nD&n_type=0&p_from=1 8u8u8u11q1q1q https://mbd.com/nD&n_type=0&p_from=1 8u8u8u'
+
+
+pattern = re.compile(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+')     # 匹配模式
+url__list = re.findall(pattern,strtttt)
+print(url__list.__len__())
+print(url__list)
+
+###                          **************************************************
