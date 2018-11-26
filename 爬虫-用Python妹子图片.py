@@ -45,3 +45,5 @@ if __name__ == '__main__':#主函数
     #循环URL
     for url in  urls:
         get_girlphoto(url)
+        
+        
