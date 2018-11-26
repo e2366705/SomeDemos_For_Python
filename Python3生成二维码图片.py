@@ -22,3 +22,5 @@ def qrcodeWithText(text):
 test = r'https://www.pornhub.com/view_video.php?viewkey=ph5b06c9cc6ae00'
 qrcodeWithText(test)
 print('二维码已生成！')
+
+
