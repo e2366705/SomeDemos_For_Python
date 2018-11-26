@@ -40,3 +40,5 @@ print r.text
 print r.headers #响应头
 print r.request.headers #请求头
 
+
+
