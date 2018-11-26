@@ -1,0 +1,50 @@
+
+
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+from lxml import etree
+from selenium import webdriver
+import time
+import re
+
+# 这种更加快速!!!!!!!!
+
+# ---------------------------------------------- search的结果___ (格式 [教程名 : 教程链接]) ----------------------------------------------#
+search_webs_data = []
+
+def  search_webs(URL):
+    browser = webdriver.Chrome()
+    browser.get(URL)
+    time.sleep(1)
+    browser.execute_script("window.scrollTo(0, document.body.scrollHeight - 888);")
+    time.sleep(1)
+
+
+       # we='//*[@id="QuestionAnswers-answers"]/div/div/div[2]/div/div[2]/div/div[2]/div[1]'
+
+    for serial_number in range(1,6):
+        browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(1)
+        html_code = browser.page_source  # 获得网页源码数据
+        html_etree = etree.HTML(html_code)  # 结构化网页源码
+        print('-----------------------------正在写入第:' + str(serial_number) + '个---------------------------------------')
+        BBBBBB = '//*[@id="Quest--------------answers"]/div/div/div[2]/div/div[4]/div/div[2]/div[1]/span'
+        XXXpath = '//*[@id="QuestionAnswers-answers"]/div/div/div[2]/div/div['+str(serial_number)+']/div/div[2]/div[1]//text()'
+        Article = html_etree.xpath(XXXpath)
+        save_Article_data(str(Article) , str(serial_number))
+        time.sleep(1)
+
+def save_Article_data(Article_data,serial_number):
+    txt_path = 'D:\Py\zhihu\zhihu_answers_No_' + serial_number+ '.txt'
+    with open(txt_path , 'w' , encoding='UTF-8') as fff:
+        fff.write(Article_data)
+        fff.close()
+
+
+
+
+if __name__ == '__main__' :
+    search_webs('https://www.zhihu.com/question/30147821')
+    
+    
+    
