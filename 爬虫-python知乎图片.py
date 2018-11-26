@@ -122,3 +122,4 @@ class ZHGP:
 zhgp = ZHGP()
 # zhgp.beginSpider("https://www.zhihu.com/question/28521492")
 zhgp.beginSpider("https://www.zhihu.com/question/28853498")
+.
