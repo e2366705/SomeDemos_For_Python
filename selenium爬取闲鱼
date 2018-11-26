@@ -1,0 +1,58 @@
+
+
+###                        主题  --->   爬取 闲鱼 的商品        来闲鱼467天了,卖出过0件宝贝。现居浙江宁波北仑。90后巨蟹座女生
+
+from selenium import webdriver
+import time
+import re
+
+driver = webdriver.Chrome()                ## 加载驱动
+
+# 打开某些网页，会有广告遮住找到的tag，设置窗口的大小就可以避免
+# driver.set_window_size(1920, 1080)
+
+driver.implicitly_wait(6)                  #   隐性等待
+url = 'https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=582469693682&ut_sk=1.ABsvsvpbvxcDAGV5xPyYok44_21407387_1543135999278.Copy.detail.582469693682.null&forceFlush=1'
+driver.get(url)
+
+driver.implicitly_wait(10)               #   隐性等待
+time.sleep(3)                               #   强制等待
+
+datas = driver.find_elements_by_xpath('.//span[contains(.,"来闲鱼")]')      ##重点!!!!
+
+goods = ''
+
+for div in datas:
+    goods = div.text
+
+print('来闲鱼468天了,卖出过***件宝贝------>' + goods)
+
+      ##                现在把数据洗出来!!!    卖出过 *  件宝贝
+
+s = re.findall("\d+",goods)[1]           # 这就是销量了   ---->     卖出过 *  件宝贝
+the__sells = '卖出过--->' + s + '件宝贝';
+print(the__sells)
+
+sales = int(s)         # 这就是销量了   ---->     卖出过 *  件宝贝
+
+if sales < 31:          #卖出的东西 小于30件
+    aaaaaaa = "---TA卖出了-->" + str(sales) + "件宝贝........"
+    print("********************************************")
+    div = driver.find_element_by_css_selector(' body > div > div > div:nth-child(10) > div > div:nth-child(2) > span')
+    print("下面是商品说明..................................")
+    bbbbbb =  div.text
+    the__data = "\n\n"+aaaaaaa +"\n"+ bbbbbb + "\n" + url + "\n\n"
+    print(the__data)
+
+    folder = r'D:\Py\xianyu\xianyu.txt'
+    with open(folder, 'a', encoding='UTF-8') as fff:
+        fff.write(the__data)
+    fff.close()
+
+else:
+    print("一看就不是正经卖家................")
+
+time.sleep(3)
+driver.close()
+
+
