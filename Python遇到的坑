@@ -1,0 +1,9 @@
+
+
+
+相关教材 : https://blog.csdn.net/ljl6158999/article/details/78527237
+
+
+
+selenium又一小坑 无法用XPATH直接获取属性值 需要使用.get_attribute(“href”)
+https://blog.csdn.net/hacklyc/article/details/65454285
