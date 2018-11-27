@@ -1,5 +1,12 @@
 
 
+相关教材   :       https://blog.csdn.net/ljl6158999/article/details/78527237
+
+
+
+
+
+
 ###                        主题  --->   爬取 闲鱼 的商品        来闲鱼467天了,卖出过0件宝贝。现居浙江宁波北仑。90后巨蟹座女生
 
 from selenium import webdriver
