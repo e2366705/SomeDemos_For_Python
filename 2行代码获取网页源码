@@ -2,8 +2,6 @@
 # -*- coding: UTF-8 -*-
 import requests
 
-html_code = requests.get('https://tieba.baidu.com/p/5193551629?red_tag=0426669597')
-html_code.encoding = 'utf-8'               
-print html_code.text
-
-
+html_code = requests.get('https://app.e0734.com')
+html_code.encoding = 'utf-8'
+print(html_code.text)
